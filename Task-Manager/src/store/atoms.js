@@ -5,3 +5,9 @@ export const taskAtoms = atom({
     default:[]
 
 })
+
+export const taskListAtoms = atom({
+    key:"taskListAtoms",
+    default:[]
+
+})

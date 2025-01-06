@@ -1,14 +1,22 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { taskAtoms } from "../store/atoms";
+import { taskAtoms,taskListAtoms} from "../store/atoms";
+
 
 export default function AddTask() {
   const [taskAtom, setTaskAtom] = useRecoilState(taskAtoms);
+  const setTaskListAtom = useSetRecoilState(taskListAtoms)
 
     const handleChange = (event) => {
         setTaskAtom(event.target.value)
         
     }
-
+    function addTasks(){
+        if(taskAtom.trim() != ''){
+            setTaskListAtom((oldList)=>[...oldList,taskAtom])
+            setTaskAtom('')
+        }   
+        
+    }
   return (
     <>
       <label htmlFor="task">Enter the task</label>
@@ -18,7 +26,7 @@ export default function AddTask() {
         onChange={handleChange}
         value={taskAtom}
       />
-      <button>Add Task</button>
+      <button onClick={addTasks}>Add Task</button>
     </>
   );
 }

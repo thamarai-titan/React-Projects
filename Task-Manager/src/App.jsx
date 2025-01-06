@@ -1,4 +1,5 @@
 import AddTask from "./components/AddTask";
+import DisplayTasks from "./components/DisplayTasks";
 import { RecoilRoot } from "recoil";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <RecoilRoot>
         <AddTask />
+        <DisplayTasks/>
       </RecoilRoot>
     </>
   );
