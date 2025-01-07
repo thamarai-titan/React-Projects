@@ -19,14 +19,15 @@ export default function AddTask() {
     }
   return (
     <>
-      <label htmlFor="task">Enter the task</label>
+      <label htmlFor="task" className="text-lg">Enter the task </label>
       <input
         type="text"
         placeholder="Enter the task"
         onChange={handleChange}
         value={taskAtom}
+        className="border-black w-42"
       />
-      <button onClick={addTasks}>Add Task</button>
+      <button onClick={addTasks} className="bg-slate-400 rounded-xl w-32 p-2">Add Task</button>
     </>
   );
 }
