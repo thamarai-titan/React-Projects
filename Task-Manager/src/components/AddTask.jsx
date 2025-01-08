@@ -19,15 +19,27 @@ export default function AddTask() {
     }
   return (
     <>
+    <div className="">
+      <div className="py-5">
+
       <label htmlFor="task" className="text-lg">Enter the task </label>
+      </div>
+
+      <div className="py-5">
       <input
         type="text"
         placeholder="Enter the task"
         onChange={handleChange}
         value={taskAtom}
-        className="border-black w-42"
+        className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
       />
-      <button onClick={addTasks} className="bg-slate-400 rounded-xl w-32 p-2">Add Task</button>
+
+
+      </div>
+      <div className="py-5">
+      <button onClick={addTasks} className="bg-slate-400 rounded-full w-32 py-3">Add Task</button>
+      </div>
+      </div>
     </>
   );
 }
