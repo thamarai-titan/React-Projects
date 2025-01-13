@@ -16,7 +16,7 @@ export default function AddTask() {
   }
   return (
     <>
-      <div className="w-96 h-96 bg-gray-400 ml-auto mr-auto flex flex-col items-center">
+      <div className="w-96 m-12 pb-12 rounded-md bg-gray-300 ml-auto mr-auto flex flex-col items-center">
         <div className="pt-12 pb-6">
           <label htmlFor="task" className="">
             Enter the task{" "}
