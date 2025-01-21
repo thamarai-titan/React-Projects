@@ -1,7 +1,9 @@
 import { useEffect } from "react"
+import { useRecoilState } from "recoil"
+import { wishlistAtom } from "../store/WishListAtom"
 
 const WishList = () => {
-
+const [items,setItems] = useRecoilState(wishlistAtom)
     useEffect(()=>{
         const FetchingProducts = async () => {
             try{
